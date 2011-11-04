@@ -1,0 +1,26 @@
+section.page {
+  background-image: url(bg.png);
+}
+
+#headline-container {
+  margin-bottom: 5px;
+}
+
+#login-box {
+  margin: 0 auto;
+  width: 450px;
+}
+
+#login-form {
+  background-color: #fff;
+  border: 1px #aaa solid;
+}
+
+#logo-container {
+  vertical-align: middle;
+}
+
+#logo {
+    width: 128px;
+    height: 128px;
+}

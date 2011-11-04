@@ -9,6 +9,40 @@ Markaby::Builder.set(:auto_validation, false)
 
 module CASServer::Views
 
+  def image(name)
+    "/themes/#{current_theme}/images/#{name}"
+  end
+
+  def page_header
+    <<-HEADER
+    <header class='toplevel'>
+      <div class="wrapper">
+
+        <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}" /></a>
+        <aside id='help'>
+          <strong>Need Help?</strong> <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a> or +61 2 9422-4730
+        </aside>
+        <div class='not-connected'>
+          Live document updates disabled<br />
+          <span>The Portal will not be affected! Refresh to activate</span>
+        </div>
+        <hr>
+
+      </div><!-- .wrapper -->
+    </header>
+    HEADER
+  end
+
+  def page_footer
+    <<-FOOTER
+    <div id="footer">
+      <div class="wrapper">
+        <p class="help"><strong>Need Help?</strong> Call +61 2 9422 4730, 9am – 5pm EST (Mon – Fri) or email: <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a></p>
+      </div>
+    </div>
+    FOOTER
+  end
+
   def layout
     # wrap as XHTML only when auto_validation is on, otherwise pass right through
     if @use_layout
@@ -21,7 +55,20 @@ module CASServer::Views
             File.exists?("#{$APP_ROOT}/public/themes/#{current_theme}/favicon.png")
         end
         body(:onload => "if (document.getElementById('username')) document.getElementById('username').focus()") do
-          self << yield
+          div(:class => "container") do
+            self << page_header
+            div(:class => "content") do
+              div(:class => "wrapper") do
+                tag!("header", :class => "page") do
+                  h1(:class => "list-header") { "Log In" }
+                end
+                tag!(:section, :class => "page") do
+                  self << yield
+                end
+              end
+            end
+            self << page_footer
+          end
         end
       end
     else
