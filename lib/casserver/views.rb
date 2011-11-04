@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # The #.#.# comments (e.g. "2.1.3") refer to section numbers in the CAS protocol spec
 # under http://www.ja-sig.org/products/cas/overview/protocol/index.html
 
@@ -49,6 +50,7 @@ module CASServer::Views
       xhtml_strict do
         head do
           title { "#{organization} #{_(' Central Login')}" }
+          script(:type => "text/javascript", :src => "/themes/modernizr-1.7.min.js?20111104") { }
           link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111104")
           link(:rel => "stylesheet", :type => "text/css", :href => "/themes/#{current_theme}/theme.css?20111104")
           link(:rel => "icon", :type => "image/png", :href => "/themes/#{current_theme}/favicon.png") if
