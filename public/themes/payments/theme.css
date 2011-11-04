@@ -53,9 +53,9 @@ body {
   /* page title ---------------------------------------- */ }
   .container .content div.wrapper {
     background-color: #fff;
-    padding: 0 0 30px; }
+    padding: 0; }
     .container .content div.wrapper section.page {
-      padding: 0 15px;
+      padding: 150px 15px;
       min-height: 400px; }
       .container .content div.wrapper section.page .documents-wrapper {
         display: none; }
