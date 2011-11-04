@@ -56,7 +56,7 @@ body {
     padding: 0; }
     .container .content div.wrapper section.page {
       padding: 150px 15px;
-      min-height: 400px; }
+      }
       .container .content div.wrapper section.page .documents-wrapper {
         display: none; }
   .container .content h1.list-header {
