@@ -49,8 +49,8 @@ module CASServer::Views
       xhtml_strict do
         head do
           title { "#{organization} #{_(' Central Login')}" }
-          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css")
-          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/#{current_theme}/theme.css")
+          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111104")
+          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/#{current_theme}/theme.css?20111104")
           link(:rel => "icon", :type => "image/png", :href => "/themes/#{current_theme}/favicon.png") if
             File.exists?("#{$APP_ROOT}/public/themes/#{current_theme}/favicon.png")
         end
