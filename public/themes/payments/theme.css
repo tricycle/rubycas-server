@@ -1,90 +1,5 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6
-Last Updated: 2010-08-18
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-body {
-  line-height: 1; }
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-nav ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none; }
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold; }
-
-del {
-  text-decoration: line-through; }
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted inherit;
-  cursor: help; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0; }
-
-input, select {
-  vertical-align: middle; }
+@import url("reset.css");
+@import url("simple.css");
 
 /* General Page Structure
 ==================================================================================================== */
@@ -132,7 +47,7 @@ body {
 /* Page
 ==================================================================================================== */
 .container .content {
-  background: url(/images/bg-pattern.gif) repeat 0 0;
+  background: url(images/bg-pattern.gif) repeat 0 0;
   margin: 0;
   padding: 0;
   /* page title ---------------------------------------- */ }
@@ -145,7 +60,7 @@ body {
       .container .content div.wrapper section.page .documents-wrapper {
         display: none; }
   .container .content h1.list-header {
-    background: url(/images/list-header-bg.png) repeat-x 0 0;
+    background: url(images/list-header-bg.png) repeat-x 0 0;
     clear: both;
     color: #fff;
     font-size: 16px;
@@ -166,7 +81,7 @@ body {
         text-decoration: underline; }
 
 .container header.toplevel {
-  background: #5a787e url(/images/header-bg.png) repeat-x 0 0;
+  background: #5a787e url(images/header-bg.png) repeat-x 0 0;
   height: 162px;
   margin: 0;
   padding: 0;
@@ -269,15 +184,15 @@ table.documents {
     table.documents thead tr .header select, table.documents thead tr.filters td select {
       font-size: 12px; }
   table.documents thead tr .header {
-    background-image: url(/images/tablesorter/bg.png);
+    background-image: url(images/tablesorter/bg.png);
     background-repeat: no-repeat;
     background-position: center right;
     cursor: pointer; }
   table.documents thead tr .headerSortUp {
-    background-image: url(/images/tablesorter/asc.gif);
+    background-image: url(images/tablesorter/asc.gif);
     background-color: #e6e6e6; }
   table.documents thead tr .headerSortDown {
-    background-image: url(/images/tablesorter/desc.gif);
+    background-image: url(images/tablesorter/desc.gif);
     background-color: #e6e6e6; }
   table.documents thead tr.filters td {
     text-align: right; }
@@ -308,25 +223,25 @@ table.documents td {
     height: 24px;
     line-height: 24px; }
     table.documents td a.command-dataentry {
-      background-image: url(/images/actions/data-entry.png); }
+      background-image: url(images/actions/data-entry.png); }
     table.documents td a.command-ocrvalidator {
-      background-image: url(/images/actions/verify-data.png); }
+      background-image: url(images/actions/verify-data.png); }
     table.documents td a.command-practiceapprover {
-      background-image: url(/images/actions/practice-approver.png); }
+      background-image: url(images/actions/practice-approver.png); }
     table.documents td a.command-hqapprover {
-      background-image: url(/images/actions/hq-approver.png); }
+      background-image: url(images/actions/hq-approver.png); }
     table.documents td a.command-hqcontroller {
-      background-image: url(/images/actions/hq-controller.png); }
+      background-image: url(images/actions/hq-controller.png); }
     table.documents td a.command-suppliercreator {
-      background-image: url(/images/actions/supplier-creator.png); }
+      background-image: url(images/actions/supplier-creator.png); }
     table.documents td a.command-glaccountcreator {
-      background-image: url(/images/actions/glaccount-creator.png); }
+      background-image: url(images/actions/glaccount-creator.png); }
     table.documents td a.command-organizationpicker {
-      background-image: url(/images/actions/organization-picker.png); }
+      background-image: url(images/actions/organization-picker.png); }
     table.documents td a.command-overseaspaymentprocessor {
-      background-image: url(/images/actions/overseas-payment.png); }
+      background-image: url(images/actions/overseas-payment.png); }
     table.documents td a.command-prontoadmin {
-      background-image: url(/images/actions/pronto-review.png); }
+      background-image: url(images/actions/pronto-review.png); }
 
 section.page {
   /* search ---------------------------------------- */
@@ -352,7 +267,7 @@ section.page {
       right: 75px;
       top: 20px; }
     section.page .search input[type="submit"] {
-      background: white url(/images/search-button.gif) no-repeat 0 0;
+      background: white url(images/search-button.gif) no-repeat 0 0;
       cursor: pointer;
       border: none;
       display: block;
@@ -506,7 +421,7 @@ div.document {
       display: inline-block;
       margin-left: 2em; }
     div.document .nav .print {
-      background: url(/images/print-icon.png) no-repeat left center;
+      background: url(images/print-icon.png) no-repeat left center;
       padding: 2px 0 2px 23px; }
   div.document div.actions-wrapper {
     border-bottom: 1px solid #d9d9d9;
@@ -817,32 +732,32 @@ div.document div.notes ul li {
       font-weight: 200; }
 
 .user-conflict {
-  background: url(/images/conflict-bg.png); }
+  background: url(images/conflict-bg.png); }
 
 div.document h2 {
   line-height: 26px;
   background-position: right center;
   background-repeat: no-repeat; }
   div.document h2.command-dataentry {
-    background-image: url(/images/actions/data-entry.png); }
+    background-image: url(images/actions/data-entry.png); }
   div.document h2.command-ocrvalidator {
-    background-image: url(/images/actions/verify-data.png); }
+    background-image: url(images/actions/verify-data.png); }
   div.document h2.command-practiceapprover {
-    background-image: url(/images/actions/practice-approver.png); }
+    background-image: url(images/actions/practice-approver.png); }
   div.document h2.command-hqapprover {
-    background-image: url(/images/actions/hq-approver.png); }
+    background-image: url(images/actions/hq-approver.png); }
   div.document h2.command-hqcontroller {
-    background-image: url(/images/actions/hq-controller.png); }
+    background-image: url(images/actions/hq-controller.png); }
   div.document h2.command-suppliercreator {
-    background-image: url(/images/actions/supplier-creator.png); }
+    background-image: url(images/actions/supplier-creator.png); }
   div.document h2.command-glaccountcreator {
-    background-image: url(/images/actions/glaccount-creator.png); }
+    background-image: url(images/actions/glaccount-creator.png); }
   div.document h2.command-organizationpicker {
-    background-image: url(/images/actions/organization-picker.png); }
+    background-image: url(images/actions/organization-picker.png); }
   div.document h2.command-overseaspaymentprocessor {
-    background-image: url(/images/actions/overseas-payment.png); }
+    background-image: url(images/actions/overseas-payment.png); }
   div.document h2.command-prontoadmin {
-    background-image: url(/images/actions/pronto-review.png); }
+    background-image: url(images/actions/pronto-review.png); }
 div.document div.description {
   text-align: left;
   margin-bottom: 20px; }
@@ -950,7 +865,7 @@ div.document.split div.scans .pages li {
 /* Footer
 ==================================================================================================== */
 #footer {
-  background: #5a787e url(/images/footer-bg.png) repeat-x 0 0;
+  background: #5a787e url(images/footer-bg.png) repeat-x 0 0;
   clear: both;
   height: 55px;
   padding: 20px 0; }
