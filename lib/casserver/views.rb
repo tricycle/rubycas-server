@@ -97,6 +97,7 @@ module CASServer::Views
         <div id="feature">
           <div id="intro">
             <h1>Welcome to the <strong>Payments Portal</strong></h1>
+            #{message if @message}
             #{login_form}
           </div>
         </div>
@@ -121,6 +122,12 @@ module CASServer::Views
         </p>
       </form>
     LOGIN
+  end
+
+  def message
+    <<-MSG
+      <p class="messagebox #{@message[:type]}">#{@message[:message]}</p>
+    MSG
   end
 
   # 2.3.2
