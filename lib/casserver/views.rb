@@ -16,31 +16,39 @@ module CASServer::Views
 
   def page_header
     <<-HEADER
-    <header class='toplevel'>
-      <div class="wrapper">
-
-        <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}" /></a>
-        <aside id='help'>
-          <strong>Need Help?</strong> <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a> or +61 2 9422-4730
-        </aside>
-        <div class='not-connected'>
-          Live document updates disabled<br />
-          <span>The Portal will not be affected! Refresh to activate</span>
+      <header class="toplevel">
+        <div class="wrapper">
+          <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}"></a>
+          <nav>
+            <li><a href="http://staging.accounts.dentalcorp.com.au">Administration</a></li>
+            <li><a href="http://portal.dentalcorp.com.au/" target="_blank">Purchasing Portal</a></li>
+          </nav>
+          <hr>
         </div>
-        <hr>
-
-      </div><!-- .wrapper -->
-    </header>
+      </header>
     HEADER
   end
 
   def page_footer
     <<-FOOTER
-    <div id="footer">
-      <div class="wrapper">
-        <p class="help"><strong>Need Help?</strong> Call +61 2 9422 4730, 9am – 5pm EST (Mon – Fri) or email: <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a></p>
+      <div id="footer">
+        <div class="wrapper">
+          <div id="need-help-info">
+            <h6>Need Help?</h6>
+            <p id="need-help-info-content">
+              <span class="line">
+                <strong>Call</strong>
+                <a href="tel:+61294224730">+61 2 9422-4730</a>
+                9am &ndash; 5pm EST (Mon &ndash; Fri),
+              </span>
+              <span class="line">
+                <strong>or email</strong>
+                <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a>
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
     FOOTER
   end
 
@@ -50,8 +58,8 @@ module CASServer::Views
       xhtml_strict do
         head do
           title { "#{organization} #{_(' Central Login')}" }
-          script(:type => "text/javascript", :src => "/themes/modernizr-1.7.min.js?20111104") { }
-          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111104")
+          script(:type => "text/javascript", :src => "/themes/modernizr-1.7.min.js?20111108") { }
+          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111108")
           link(:rel => "stylesheet", :type => "text/css", :href => "/themes/#{current_theme}/theme.css?20111104")
           link(:rel => "icon", :type => "image/png", :href => "/themes/#{current_theme}/favicon.png") if
             File.exists?("#{$APP_ROOT}/public/themes/#{current_theme}/favicon.png")

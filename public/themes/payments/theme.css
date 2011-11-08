@@ -132,7 +132,7 @@ body {
     float: right;
     font-size: 16px;
     list-style: none;
-    margin: 35px 0 0;
+    margin: 65px 0 0;
     padding: 10px 15px;
     position: relative; }
   .container header.toplevel nav li {
@@ -869,23 +869,41 @@ div.document.split div.scans .pages li {
   clear: both;
   height: 55px;
   padding: 20px 0; }
-  #footer p {
-    margin: 0; }
-    #footer p.help {
-      color: #fff;
+  #footer div.wrapper #need-help-info {
+    color: #5a787e;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px; }
+    #footer div.wrapper #need-help-info h6 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #F6D017;
+      float: left;
+      line-height: 18px;
+      margin: 0 5px 0 0; }
+    #footer div.wrapper #need-help-info p {
       float: left; }
-      #footer p.help strong {
-        color: #fff; }
-      #footer p.help a {
-        color: #fff; }
-    #footer p.prices {
+    #footer div.wrapper #need-help-info a {
+      color: #5a787e; }
+    #footer div.wrapper #need-help-info a:hover {
+      color: #fff; }
+    #footer div.wrapper #need-help-info strong {
+      color: #fff; }
+    #footer div.wrapper #need-help-info strong a {
       color: #fff;
-      float: right;
-      font-size: 12px;
-      text-align: right; }
+      text-decoration: none; }
+    #footer div.wrapper #need-help-info p {
+      margin: 0; }
 
-.flash .message.notice {
-  background-color: #DAFFCD; }
+body .ui-tooltip-content,
+body .ui-tooltip-titlebar {
+  font-size: 10.5px;
+  line-height: 12px; }
+  body .ui-tooltip-content a,
+  body .ui-tooltip-titlebar a {
+    color: #5a787e; }
 
-.flash .message.alert {
-  background-color: #F88; }
+body .ui-tooltip-content #need-help-info-content .line {
+  display: block;
+  padding: 2px 0; }
