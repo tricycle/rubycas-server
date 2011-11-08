@@ -111,6 +111,8 @@ module CASServer::Views
 
     <<-LOGIN
       <form action="#{@form_action || "/login"}" method="post" onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='#{submitbutton}'; submitbutton.disabled=true; return true;" class="login-form">
+        <input id="lt" name="lt" type="hidden" value="#{@lt}">
+        <input id="service" name="service" type="hidden" value="#{@service}">
         <p>
           <input class="title" id="username" name="username" placeholder="Username" accesskey="u" size="30" type="text">
         </p>
@@ -118,7 +120,7 @@ module CASServer::Views
           <input class="title" id="password" name="password" placeholder="Password" accesskey="p" size="30" type="password">
         </p>
         <p class="action">
-          <input id="login-submit" class="button primary" name="commit" type="submit" value="Sign In">
+          <input id="login-submit" class="button primary" name="commit" accesskey="l" type="submit" value="Sign In">
         </p>
       </form>
     LOGIN
