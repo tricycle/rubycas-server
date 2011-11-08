@@ -58,8 +58,11 @@ module CASServer::Views
       xhtml_strict do
         head do
           title { "#{organization} #{_(' Central Login')}" }
-          script(:type => "text/javascript", :src => "/themes/modernizr-1.7.min.js?20111108") { }
-          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111108")
+          script(:type => "text/javascript", :src => "/themes/modernizr-1.7.min.js?20111109") { }
+          script(:type => "text/javascript", :src => "/themes/jquery-1.4.2.min.js?20111109") { }
+          script(:type => "text/javascript", :src => "/themes/jquery.placeholder.min.js?20111109") { }
+          script(:type => "text/javascript", :src => "/themes/application.js?20111109") { }
+          link(:rel => "stylesheet", :type => "text/css", :href => "/themes/cas.css?20111109")
           link(:rel => "stylesheet", :type => "text/css", :href => "/themes/#{current_theme}/theme.css?20111104")
           link(:rel => "icon", :type => "image/png", :href => "/themes/#{current_theme}/favicon.png") if
             File.exists?("#{$APP_ROOT}/public/themes/#{current_theme}/favicon.png")
