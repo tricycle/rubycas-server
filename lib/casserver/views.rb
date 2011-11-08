@@ -92,71 +92,35 @@ module CASServer::Views
   def login
     @use_layout = true
 
-    table(:id => "login-box") do
-      tr do
-        td(:colspan => 2) do
-          div(:id => "headline-container") do
-            strong organization
-            text _(" Central Login")
-          end
-        end
-      end
-      if @message
-        tr do
-          td(:colspan => 2, :id => "messagebox-container") do
-            div(:class => "messagebox #{@message[:type]}") { @message[:message] }
-          end
-        end
-      end
-      tr do
-        td(:id => "logo-container") do
-          img(:id => "logo", :src => "/themes/#{current_theme}/logo.png")
-        end
-        td(:id => "login-form-container") do
-          @include_infoline = true
-          login_form
-        end
-      end
-    end
+    <<-MAIN
+      <div class="wrapper">
+        <div id="feature">
+          <div id="intro">
+            <h1>Welcome to the <strong>Payments Portal</strong></h1>
+            #{login_form}
+          </div>
+        </div>
+      </div>
+    MAIN
   end
 
   # Just the login form.
   def login_form
     submitbutton = _("Please wait...")
-    form(:method => "post", :action => @form_action || '/login', :id => "login-form",
-         :onsubmit => "submitbutton = document.getElementById('login-submit'); submitbutton.value='#{submitbutton}'; submitbutton.disabled=true; return true;") do
-      table(:id => "form-layout") do
-        tr do
-          td(:id => "username-label-container") do
-            label(:id => "username-label", :for => "username") { _( "Username" ) }
-          end
-          td(:id => "username-container") do
-            input(:type => "text", :id => "username", :name => "username",
-              :size => "32", :tabindex => "1", :accesskey => "u")
-          end
-        end
-        tr do
-          td(:id => "password-label-container") do
-            label(:id => "password-label", :for => "password") { _( "Password" ) }
-          end
-          td(:id => "password-container") do
-            input(:type => "password", :id => "password", :name => "password",
-              :size => "32", :tabindex => "2", :accesskey => "p", :autocomplete => "off")
-          end
-        end
-        tr do
-          td{}
-          td(:id => "submit-container") do
-            input(:type => "hidden", :id => "lt", :name => "lt", :value => @lt)
-            input(:type => "hidden", :id => "service", :name => "service", :value => @service)
-            input(:type => "submit", :class => "button", :accesskey => "l", :value => _("LOGIN"), :tabindex => "4", :id => "login-submit")
-          end
-        end
-        tr do
-          td(:colspan => 2, :id => "infoline") { infoline }
-        end if @include_infoline
-      end
-    end
+
+    <<-LOGIN
+      <form action="#{@form_action || "/login"}" method="post" onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='#{submitbutton}'; submitbutton.disabled=true; return true;" class="login-form">
+        <p>
+          <input class="title" id="username" name="username" placeholder="Username" accesskey="u" size="30" type="text">
+        </p>
+        <p>
+          <input class="title" id="password" name="password" placeholder="Password" accesskey="p" size="30" type="password">
+        </p>
+        <p class="action">
+          <input id="login-submit" class="button primary" name="commit" type="submit" value="Sign In">
+        </p>
+      </form>
+    LOGIN
   end
 
   # 2.3.2
