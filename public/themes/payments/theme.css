@@ -363,8 +363,17 @@ section.page #intro h1 {
 section.page h1 {
   margin: 0 0 38px;
 }
-section.page .login-form p {
+section.page #intro p {
   margin: 0 0 18px;
+}
+section.page #intro p.messagebox {
+  font-weight: bold;
+}
+section.page #intro p.messagebox.mistake {
+  color: #C00;
+}
+section.page #intro p.messagebox.confirmation {
+  color: #280;
 }
 section.page .login-form input.title {
   background-color: white;
