@@ -20,8 +20,8 @@ module CASServer::Views
         <div class="wrapper">
           <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}"></a>
           <nav>
-            <li><a href="http://staging.accounts.dentalcorp.com.au">Administration</a></li>
-            <li><a href="http://portal.dentalcorp.com.au/" target="_blank">Purchasing Portal</a></li>
+            <li><a id="admin_link" >Administration</a></li>
+            <li><a id="portal_link" target="_blank">Purchasing Portal</a></li>
           </nav>
           <hr>
         </div>
