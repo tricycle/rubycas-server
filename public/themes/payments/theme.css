@@ -351,7 +351,7 @@ section.page #feature {
 }
 section.page #intro {
   margin: 0 0 0 700px;
-  padding: 30px 16px 0;
+  padding: 30px 5px 0 16px;
 }
 section.page #intro h1 {
   color: #5A787E;

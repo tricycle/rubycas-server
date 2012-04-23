@@ -18,11 +18,6 @@ module CASServer::Views
     <<-HEADER
       <header class="toplevel">
         <div class="wrapper">
-          <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}"></a>
-          <nav>
-            <li><a href="http://staging.accounts.dentalcorp.com.au">Administration</a></li>
-            <li><a href="http://portal.dentalcorp.com.au/" target="_blank">Purchasing Portal</a></li>
-          </nav>
           <hr>
         </div>
       </header>
@@ -33,20 +28,6 @@ module CASServer::Views
     <<-FOOTER
       <div id="footer">
         <div class="wrapper">
-          <div id="need-help-info">
-            <h6>Need Help?</h6>
-            <p id="need-help-info-content">
-              <span class="line">
-                <strong>Call</strong>
-                <a href="tel:+61294224730">+61 2 9422-4730</a>
-                9am &ndash; 5pm EST (Mon &ndash; Fri),
-              </span>
-              <span class="line">
-                <strong>or email</strong>
-                <a href="mailto:accounts@dentalcorp.com.au">accounts@dentalcorp.com.au</a>
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     FOOTER
@@ -99,7 +80,7 @@ module CASServer::Views
       <div class="wrapper">
         <div id="feature">
           <div id="intro">
-            <h1>Welcome to the <strong>Payments Portal</strong></h1>
+            <h1>Welcome to <strong>Jasper Workflow</strong></h1>
             #{message if @message}
             #{login_form}
           </div>
