@@ -1,0 +1,8 @@
+source :rubygems
+
+gem "mysql"
+gem "activerecord", "~> 2.3"
+gem "activesupport", "~> 2.3"
+gem "gettext"
+gem "picnic", ">= 0.8.1.20100201"
+

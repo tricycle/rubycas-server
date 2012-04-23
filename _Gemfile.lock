@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activerecord (2.3.14)
+      activesupport (= 2.3.14)
+    activesupport (2.3.14)
+    builder (3.0.0)
+    gettext (2.2.0)
+      locale
+    locale (2.0.5)
+    markaby (0.7.2)
+      builder (>= 2.0.0)
+    mysql (2.8.1)
+    picnic (0.8.1.20100201)
+      activesupport
+      markaby
+      rack
+    rack (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (~> 2.3)
+  activesupport (~> 2.3)
+  gettext
+  mysql
+  picnic (>= 0.8.1.20100201)
