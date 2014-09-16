@@ -18,7 +18,9 @@ module CASServer::Views
     <<-HEADER
       <header class="toplevel">
         <div class="wrapper">
-          <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}"></a>
+          <div class="logo-wrapper">
+             <a href="#" class="logo"><img alt="Logo" src="#{image('logo.png')}"></a>
+          </div>
           <nav>
             <li><a id="admin_link" >Administration</a></li>
             <li><a id="portal_link" target="_blank">Purchasing Portal</a></li>
